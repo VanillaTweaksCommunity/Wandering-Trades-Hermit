@@ -23,7 +23,7 @@ execute if score @s wt_trades >= @s wt_random run scoreboard players reset @s
 tag @s[tag=!has_new_block_trades] remove success
 
 # Get trade index
-execute store result score @s wt_tradeIndex run random value 129..318
+execute store result score @s wt_tradeIndex run random value 129..329
 
 # Check if trade index is in existing trades
 execute at @s[tag=!success,tag=!has_new_block_trades] as @e[type=minecraft:item,distance=..0.5,tag=trade_index_copy] run function wandering_trades:check_existing_trades
